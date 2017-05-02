@@ -1,4 +1,5 @@
 ﻿#region BSD 3-Clause License
+
 /*
  * TalisarFilter
  * 
@@ -27,13 +28,15 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 #endregion
 
-using KSP.UI.Screens;
-using RUI.Icons.Selectable;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using KSP.Localization;
+using KSP.UI.Screens;
+using RUI.Icons.Selectable;
 using UnityEngine;
 
 namespace TalisarFilter
@@ -41,10 +44,10 @@ namespace TalisarFilter
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
     public class TalisarFilter : MonoBehaviour
     {
-        private readonly List<AvailablePart> parts = new List<AvailablePart>();
         private readonly List<string> manufacturers = new List<string>();
-        private string category = "#autoLOC_453547";
-        private string categoryTitle = "Talisar";
+        private readonly List<AvailablePart> parts = new List<AvailablePart>();
+        private readonly string category = "#autoLOC_453547";
+        private readonly string categoryTitle = "Talisar";
 
         public void Awake()
         {
@@ -71,11 +74,11 @@ namespace TalisarFilter
 
         private void AddManufacturers()
         {
-            manufacturers.Add("Talisar's Cargo Solutions");
-            manufacturers.Add("Talisar's Spherical Tanks");
-            manufacturers.Add("Talisar's Toroidal Tanks");
-            manufacturers.Add("Talisar's Science Storages");
-            manufacturers.Add("Talisar's Structural Toys");
+            manufacturers.Add(Localizer.Format("#LOC_Tal_Cargo_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#LOC_Tal_Spherical_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#LOC_Tal_Toroidal_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#LOC_Tal_Science_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#LOC_Tal_Structural_Manufacturer"));
         }
 
         private void RemovePartCategory()
