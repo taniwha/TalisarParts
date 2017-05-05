@@ -100,7 +100,7 @@ namespace TalisarFilter
         {
             Icon icon = GenerateIcon(categoryTitle);
             PartCategorizer.Category filter = PartCategorizer.Instance.filters.Find(f => f.button.categoryName == category);
-            PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, icon, EditorItemsFilter);
+            PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, categoryTitle, icon, EditorItemsFilter);
         }
 
         private Icon GenerateIcon(string iconName)
