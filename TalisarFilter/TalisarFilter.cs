@@ -74,11 +74,11 @@ namespace TalisarFilter
 
         private void AddManufacturers()
         {
-            manufacturers.Add(Localizer.Format("#LOC_Tal_Cargo_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#LOC_Tal_Spherical_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#LOC_Tal_Toroidal_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#LOC_Tal_Science_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#LOC_Tal_Structural_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#Talloc_Cargo_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#Talloc_Spherical_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#Talloc_Toroidal_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#Talloc_Science_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#Talloc_Structural_Manufacturer"));
         }
 
         private void RemovePartCategory()
