@@ -16,7 +16,7 @@ Source Code: https://github.com/taniwha/TalisarParts
 
 Install Instructions:
 1. Delete any existing TalisarParts folder in your KSP/GameData folder.
-2. Install Modular Fuel Tanks and install into your KSP/GameData folder.
+2. Download Modular Fuel Tanks and install into your KSP/GameData folder.
 3. Extract this archive to your KSP/GameData folder.
 
 Credits:
@@ -25,6 +25,7 @@ Credits:
 * ialdabaoth for creating Modular Fuel Systems.
 * NathanKell, swamp_ig and Chestburster for maintaining Modular Fuel Systems Continued.
 * taniwha for maintaining Modular Fuel Tanks.
+* Olympic1 for updating this for KSP 1.2 and 1.3.
 
 License:
 This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
@@ -35,6 +36,13 @@ To view a copy of this license, visit https://opensource.org/licenses/BSD-3-Clau
 
 ----------
 Changelog:
+
+v1.0.3 for KSP 1.3
+* All work by Olympic1 (many thanks)
+* Update for KSP 1.3
+* Localization for all parts (currently only English)
+* Added all parts to a custom category called 'Talisar'.
+* Updated readme with instructions.
 
 v1.0.2 for KSP 1.2
 * All work by Olympic1 (many thanks)
