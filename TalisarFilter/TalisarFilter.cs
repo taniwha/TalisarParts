@@ -46,7 +46,7 @@ namespace TalisarFilter
     {
         private readonly List<string> manufacturers = new List<string>();
         private readonly List<AvailablePart> parts = new List<AvailablePart>();
-        private readonly string category = "#autoLOC_453547";
+        private readonly string category = "Filter by function";
         private readonly string categoryTitle = "Talisar";
 
         public void Awake()
