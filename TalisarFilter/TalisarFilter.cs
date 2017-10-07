@@ -55,10 +55,8 @@ namespace TalisarFilter
             AddManufacturers();
 
             parts.Clear();
-            int count = PartLoader.LoadedPartsList.Count;
-            for (int i = 0; i < count; ++i)
+            foreach (AvailablePart avPart in PartLoader.LoadedPartsList)
             {
-                AvailablePart avPart = PartLoader.LoadedPartsList[i];
                 if (!avPart.partPrefab)
                     continue;
 
@@ -66,11 +64,19 @@ namespace TalisarFilter
                     parts.Add(avPart);
             }
 
+            // Prevent parts to show up in stock filters
             RemovePartCategory();
 
-            Debug.Log($"[TF] - Added {parts.Count} parts to filter");
+            // Add filter if there are parts
             if (parts.Count > 0)
+            {
+                Debug.Log($"[TF] Adding {categoryTitle} filter with {parts.Count} parts");
                 GameEvents.onGUIEditorToolbarReady.Add(SubCategories);
+            }
+            else
+            {
+                Debug.Log($"[TF] Cannot add {categoryTitle} filter since there are no parts");
+            }
         }
 
         private void AddManufacturers()
@@ -84,10 +90,8 @@ namespace TalisarFilter
 
         private void RemovePartCategory()
         {
-            int count = parts.Count;
-            for (int i = 0; i < count; ++i)
+            foreach (AvailablePart avPart in parts)
             {
-                AvailablePart avPart = parts[i];
                 avPart.category = PartCategories.none;
             }
         }
