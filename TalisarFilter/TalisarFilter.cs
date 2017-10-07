@@ -32,8 +32,6 @@
 #endregion
 
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
 using KSP.Localization;
 using KSP.UI.Screens;
 using RUI.Icons.Selectable;
@@ -46,8 +44,11 @@ namespace TalisarFilter
     {
         private readonly List<string> manufacturers = new List<string>();
         private readonly List<AvailablePart> parts = new List<AvailablePart>();
+
         private readonly string category = "#autoLOC_453547";
         private readonly string categoryTitle = "Talisar";
+        private readonly string normalIcon = "Talisar_N.png";
+        private readonly string selectedIcon = "Talisar_S.png";
 
         public void Awake()
         {
@@ -98,7 +99,6 @@ namespace TalisarFilter
 
         private void SubCategories()
         {
-            Icon icon = GenerateIcon(categoryTitle);
             PartCategorizer.Category filter = PartCategorizer.Instance.filters.Find(f => f.button.categorydisplayName == category);
             if (filter == null)
             {
@@ -106,22 +106,16 @@ namespace TalisarFilter
                 Debug.Log($"[TF] Cannot find the 'Filter by Function' button for category: {categoryTitle}");
                 return;
             }
-            PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, categoryTitle, icon, EditorItemsFilter);
+            PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, categoryTitle, GenerateIcon(), EditorItemsFilter);
         }
 
-        private Icon GenerateIcon(string iconName)
+        private Icon GenerateIcon()
         {
-            Texture2D normalIcon = new Texture2D(64, 64, TextureFormat.RGBA32, false);
-            string normalIconFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), iconName + "_N.png");
-            normalIcon.LoadImage(File.ReadAllBytes(normalIconFile));
+            Texture2D normalTexture = GameDatabase.Instance.GetTexture(normalIcon, false);
+            Texture2D selectedTexture = GameDatabase.Instance.GetTexture(selectedIcon, false);
 
-            Texture2D selectedIcon = new Texture2D(64, 64, TextureFormat.RGBA32, false);
-            string selectedIconFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), iconName + "_S.png");
-            selectedIcon.LoadImage(File.ReadAllBytes(selectedIconFile));
-
-            Debug.Log($"[TF] - Adding icon for {categoryTitle}");
-            Icon icon = new Icon(iconName + "Icon", normalIcon, selectedIcon);
-            return icon;
+            Debug.Log($"[TF] Adding icon for {categoryTitle}");
+            return new Icon(categoryTitle + "-icon", normalTexture, selectedTexture);
         }
     }
 }
