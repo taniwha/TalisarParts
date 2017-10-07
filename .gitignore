@@ -11,6 +11,9 @@ build/
 [Bb]in/
 [Oo]bj/
 
+# Visual Studio cache directory
+.vs/
+
 # Windows image file caches
 Thumbs.db
 

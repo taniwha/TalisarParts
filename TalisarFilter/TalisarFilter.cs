@@ -46,7 +46,7 @@ namespace TalisarFilter
     {
         private readonly List<string> manufacturers = new List<string>();
         private readonly List<AvailablePart> parts = new List<AvailablePart>();
-        private readonly string category = "Filter by function";
+        private readonly string category = "#autoLOC_453547";
         private readonly string categoryTitle = "Talisar";
 
         public void Awake()
@@ -99,7 +99,13 @@ namespace TalisarFilter
         private void SubCategories()
         {
             Icon icon = GenerateIcon(categoryTitle);
-            PartCategorizer.Category filter = PartCategorizer.Instance.filters.Find(f => f.button.categoryName == category);
+            PartCategorizer.Category filter = PartCategorizer.Instance.filters.Find(f => f.button.categorydisplayName == category);
+            if (filter == null)
+            {
+                // This can only happen if there are major changes in the KSP code
+                Debug.Log($"[TF] Cannot find the 'Filter by Function' button for category: {categoryTitle}");
+                return;
+            }
             PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, categoryTitle, icon, EditorItemsFilter);
         }
 
