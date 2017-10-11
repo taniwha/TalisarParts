@@ -70,22 +70,22 @@ namespace TalisarFilter
             // Add filter if there are parts
             if (parts.Count > 0)
             {
-                Debug.Log($"[TF] Adding {categoryTitle} filter with {parts.Count} parts");
+                Debug.Log($"[TF] Adding {categoryTitle} filter with {parts.Count} parts.");
                 GameEvents.onGUIEditorToolbarReady.Add(SubCategories);
             }
             else
             {
-                Debug.Log($"[TF] Cannot add {categoryTitle} filter since there are no parts");
+                Debug.Log($"[TF] Cannot add {categoryTitle} filter since there are no parts.");
             }
         }
 
         private void AddManufacturers()
         {
-            manufacturers.Add(Localizer.Format("#Talloc_Cargo_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#Talloc_Spherical_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#Talloc_Toroidal_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#Talloc_Science_Manufacturer"));
-            manufacturers.Add(Localizer.Format("#Talloc_Structural_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#autoLOC_Tal_Cargo_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#autoLOC_Tal_Spherical_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#autoLOC_Tal_Toroidal_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#autoLOC_Tal_Science_Manufacturer"));
+            manufacturers.Add(Localizer.Format("#autoLOC_Tal_Structural_Manufacturer"));
         }
 
         private void RemovePartCategory()
@@ -107,7 +107,7 @@ namespace TalisarFilter
             if (filter == null)
             {
                 // This can only happen if there are major changes in the KSP code
-                Debug.Log($"[TF] Cannot find the 'Filter by Function' button for category: {categoryTitle}");
+                Debug.Log($"[TF] Cannot find the 'Filter by Function' button for category: {categoryTitle}.");
                 return;
             }
             PartCategorizer.AddCustomSubcategoryFilter(filter, categoryTitle, categoryTitle, GenerateIcon(), EditorItemsFilter);
@@ -118,7 +118,7 @@ namespace TalisarFilter
             Texture2D normalTexture = GameDatabase.Instance.GetTexture(normalIcon, false);
             Texture2D selectedTexture = GameDatabase.Instance.GetTexture(selectedIcon, false);
 
-            Debug.Log($"[TF] Adding icon for {categoryTitle}");
+            Debug.Log($"[TF] Adding icon for {categoryTitle}.");
             return new Icon(categoryTitle + "-icon", normalTexture, selectedTexture);
         }
     }
