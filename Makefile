@@ -16,7 +16,7 @@ ZIP		:= zip
 
 .PHONY: all clean info
 
-SUBDIRS=GameData Source
+SUBDIRS=Assets GameData Source
 
 DATA	:= \
 	README.md \

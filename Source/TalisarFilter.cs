@@ -47,8 +47,9 @@ namespace TalisarFilter
 
         private readonly string category = "#autoLOC_453547";
         private readonly string categoryTitle = "Talisar";
-        private readonly string normalIcon = "Talisar_N.png";
-        private readonly string selectedIcon = "Talisar_S.png";
+		private readonly string textureDir = "TalisarParts/Textures/";
+        private readonly string normalIcon = "Talisar_N";
+        private readonly string selectedIcon = "Talisar_S";
 
         public void Awake()
         {
@@ -115,8 +116,8 @@ namespace TalisarFilter
 
         private Icon GenerateIcon()
         {
-            Texture2D normalTexture = GameDatabase.Instance.GetTexture(normalIcon, false);
-            Texture2D selectedTexture = GameDatabase.Instance.GetTexture(selectedIcon, false);
+            Texture2D normalTexture = GameDatabase.Instance.GetTexture(textureDir+normalIcon, false);
+            Texture2D selectedTexture = GameDatabase.Instance.GetTexture(textureDir+selectedIcon, false);
 
             Debug.Log($"[TF] Adding icon for {categoryTitle}.");
             return new Icon(categoryTitle + "-icon", normalTexture, selectedTexture);

@@ -133,8 +133,6 @@ TalisarParts/Parts/Command/TAL_Capsule01/CapsuleTexture.dds
 TalisarParts/Parts/Science/TAL_Radial_Experiment_Storage_Container/TAL_Radial_Experiment_Storage_Container.cfg
 TalisarParts/Parts/Science/TAL_Radial_Experiment_Storage_Container/TAL_Radial_Experiment_Storage_Container.mu
 TalisarParts/Parts/Science/TAL_Radial_Experiment_Storage_Container/TAL_Experiment_Storage_Texture.dds
-TalisarParts/Filter/Talisar_S.png
-TalisarParts/Filter/Talisar_N.png
 TalisarParts/Resources/TankTypes.cfg
 TalisarParts/Localization/Spanish.cfg
 TalisarParts/Localization/Chinese.cfg
