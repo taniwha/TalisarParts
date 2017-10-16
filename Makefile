@@ -16,7 +16,7 @@ ZIP		:= zip
 
 .PHONY: all clean info
 
-SUBDIRS=GameData TalisarFilter
+SUBDIRS=GameData Source
 
 DATA	:= \
 	README.md \
