@@ -30,10 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Games\KSP\KSP_Dev\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine">
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Games\KSP\KSP_Dev\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -42,15 +44,15 @@
     <Compile Include="TalisarFilter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Talisar_N.png" />
-    <Content Include="Talisar_S.png" />
+    <Content Include="..\Assets\Talisar_N.png" />
+    <Content Include="..\Assets\Talisar_S.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>@echo:
 @echo Distributing TalisarFilter files...
 copy /y "$(TargetDir)TalisarFilter.dll" "..\..\..\GameData\TalisarParts\Filter"
-copy /y "$(SolutionDir)Talisar_N.png" "..\..\..\GameData\TalisarParts\Filter"
-copy /y "$(SolutionDir)Talisar_S.png" "..\..\..\GameData\TalisarParts\Filter"</PostBuildEvent>
+copy /y "$(SolutionDir)..\Assets\Talisar_N.png" "..\..\..\GameData\TalisarParts\Filter"
+copy /y "$(SolutionDir)..\Assets\Talisar_S.png" "..\..\..\GameData\TalisarParts\Filter"</PostBuildEvent>
   </PropertyGroup>
 </Project>
