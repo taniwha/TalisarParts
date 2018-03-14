@@ -3,7 +3,7 @@
 /*
  * TalisarFilter
  * 
- * Copyright (c) 2017, Arne Peirs
+ * Copyright (c) 2017-2018, Arne Peirs
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification,

@@ -25,7 +25,7 @@ Credits:
 * ialdabaoth for creating Modular Fuel Systems.
 * NathanKell, swamp_ig and Chestburster for maintaining Modular Fuel Systems Continued.
 * taniwha for maintaining Modular Fuel Tanks.
-* Olympic1 for updating this for KSP 1.2 and 1.3.
+* Olympic1 for updating this for KSP 1.2 and higher.
 
 License:
 This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
@@ -37,7 +37,14 @@ To view a copy of this license, visit https://opensource.org/licenses/BSD-3-Clau
 ----------
 Changelog:
 
-v1.0.3 for KSP 1.3
+v1.2.0 for KSP 1.4
+* Update for KSP 1.4
+* Gave all parts more stock-alike tolerances.
+* Switch from FStextureSwitch to ModulePartVariants.
+* Fairings now use the stock variants.
+* Separators can now get test contracts.
+
+v1.1.0 for KSP 1.3
 * All work by Olympic1 (many thanks)
 * Update for KSP 1.3
 * Localization for all parts (currently only English)
