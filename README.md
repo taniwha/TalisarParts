@@ -1,5 +1,4 @@
 # Talisar Parts
--------------
 
 Originally created by Talisar and currently maintained by taniwha and Olympic1.
 
@@ -11,15 +10,15 @@ Talisar Parts consists of several seperate mods made by Talisar that are merged 
 
 -------------
 
-Forum Thread: http://forum.kerbalspaceprogram.com/index.php?/topic/116849-122-talisar-parts-v102/
+Forum Thread: http://forum.kerbalspaceprogram.com/index.php?/topic/116849-122-talisar-parts-v102/  
 Source Code: https://github.com/taniwha/TalisarParts
 
-Install Instructions:
+**Install Instructions:**
 1. Delete any existing TalisarParts folder in your KSP/GameData folder.
 2. Download Modular Fuel Tanks and install into your KSP/GameData folder.
 3. Extract this archive to your KSP/GameData folder.
 
-Credits:
+**Credits:**
 * Talisar for creating these parts.
 * Snjo for the Firespitter plugin and for the help understanding how to make it work.
 * ialdabaoth for creating Modular Fuel Systems.
@@ -27,29 +26,31 @@ Credits:
 * taniwha for maintaining Modular Fuel Tanks.
 * Olympic1 for updating this for KSP 1.2 and higher.
 
-License:
-This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+**License:**  
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.  
 To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/3.0/.
 
-TalisarFilter is licensed under the 3-Clause BSD License.
+TalisarFilter is licensed under the 3-Clause BSD License.  
 To view a copy of this license, visit https://opensource.org/licenses/BSD-3-Clause/.
 
 ----------
-Changelog:
+**Changelog:**
+
+v1.2.1 for KSP 1.4
+* Gave all parts more stock-alike tolerances.
+* Fairings now use the stock variants.
+* Separators can now get test contracts.
 
 v1.2.0 for KSP 1.4
 * Update for KSP 1.4
-* Gave all parts more stock-alike tolerances.
 * Switch from FStextureSwitch to ModulePartVariants.
-* Fairings now use the stock variants.
-* Separators can now get test contracts.
+* Spanish updates
 
 v1.1.0 for KSP 1.3
 * All work by Olympic1 (many thanks)
 * Update for KSP 1.3
 * Localization for all parts (currently only English)
 * Added all parts to a custom category called 'Talisar'.
-* Updated readme with instructions.
 
 v1.0.2 for KSP 1.2
 * All work by Olympic1 (many thanks)
