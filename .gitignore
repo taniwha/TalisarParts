@@ -2,6 +2,7 @@
 *.suo
 *.user
 *.sln.docstates
+*.blend1
 
 # Build results
 [Dd]ebug/
