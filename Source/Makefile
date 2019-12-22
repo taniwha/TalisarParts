@@ -52,7 +52,7 @@ bin/${DLLNAME}.dll: ${MOD_FILES}
 	@mkdir -p bin
 	${GMCS} ${GMCSFLAGS} -t:library -lib:${MANAGED} \
 		-r:Assembly-CSharp,Assembly-CSharp-firstpass \
-		-r:UnityEngine,UnityEngine.UI \
+		-r:UnityEngine,UnityEngine.UI,UnityEngine.CoreModule \
 		-out:$@ $^
 
 clean:
